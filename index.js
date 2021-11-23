@@ -32,7 +32,9 @@ const CoinMarketCap = require('coinmarketcap-api')
 const apiKey = 'e0760556-4021-485f-b2d6-31d90886fa4e'
 const client = new CoinMarketCap(apiKey)
  
-
+app.get("/", (req, res)=>{
+    res.json("Hello");
+})
 app.post('/api/search', async (req, res) => {
     const token = req.body.token;
     const wallet = req.body.wallet;
